@@ -1,0 +1,9 @@
+First, turn off Edge strength
+Then adjust the Gray threshold to a satisfactory level
+For example, you can adjust it to make the eyes black or make white and black each occupy half of area.
+Then turn on Edge strength but don't make the line too thick
+Then roughly adjust the "strong edge value" and "weak edge value" at the same time
+Then fine-tune them separately to make "strong edge value" greater than "weak edge value"
+Finally adjust Edge strength again
+
+DONE!!!
