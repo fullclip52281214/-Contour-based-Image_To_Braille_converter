@@ -1,5 +1,4 @@
 you can use your NOTEPAD to open the txt file you have exported
 but txt file doesn't have format information
-it may not be neatly arranged
+aspect ratio may be distorted
 you can change the scaling ratio with yours ctrl+Mouse wheel
-in my test 40% scaling is best ratio

@@ -97,7 +97,7 @@ def read(path):#Read image function
     a=cv2.resize(a,get_size(),cv2.INTER_NEAREST)
     return a
 
-def char_assignment(result):#上字
+def char_assignment(result):#add word
     #weight=((1,8),(2,16),(4,32),(64,128))
     weimatrix=np.array([[1,8],[2,16],[4,32],[64,128]])
     for i in range(0,len(e),4):
@@ -111,7 +111,8 @@ def char_assignment(result):#上字
             if(index!=0):
                 result[int(i/4)].append(chr(0x2800+index)) #unicode code
             else:
-                result[int(i/4)].append('⠀')
+                result[int(i/4)].append('⠁')
+                #result[int(i/4)].append('⠀') beautiful but not stable
     return result
 
 def file_editor(result):
@@ -212,25 +213,25 @@ ent2.delete(0,"end")
 ent2.insert(0,str(len(a)))
 
 
-lab4=tk.Label(root,width=30,height=2,text="picture output resolution")
+lab4=tk.Label(root,width=0,height=2,text="output resolution")
 lab4.grid(row=0,column=1,rowspan=1)
-lab2=tk.Label(root,width=3,height=2,text="x:",)
+lab2=tk.Label(root,width=3,height=2,text="x:")
 lab2.grid(row=0,column=2,rowspan=1)
 lab3=tk.Label(root,width=3,height=2,text="y:")
 lab3.grid(row=0,column=4,rowspan=1)
 labemp=tk.Label(root,width=15,height=2,text=" ")
 labemp.grid(row=0,column=6,columnspan=50)
-bot5=tk.Button(root,width=10,height=2,text="resolution update",command=update_size)
+bot5=tk.Button(root,width=15,height=2,text="resolution update",command=update_size)
 bot5.grid(row=0,column=7,padx=10,pady=5)
 
 
-bot1=tk.Button(root,width=20,height=2,text="output txt file",command=output_txt)
-bot1.grid(row=5,column=1,padx=10,pady=5)
-bot2=tk.Button(root,width=20,height=2,text="output line draft",command=output_png)
-bot2.grid(row=5,column=2,padx=10,pady=5)
-bot3=tk.Button(root,width=20,height=2,text="Choose to import pictures",command=change_file)
-bot3.grid(row=5,column=3,padx=10,pady=5)
-bot4=tk.Button(root,width=20,height=2,text="View original image",command=seesee)
-bot4.grid(row=5,column=4,padx=10,pady=5)
+bot1=tk.Button(root,width=15,height=2,text="output txt",command=output_txt)
+bot1.grid(row=5,column=1,padx=2,pady=5)
+bot2=tk.Button(root,width=15,height=2,text="output draft",command=output_png)
+bot2.grid(row=5,column=3,padx=2,pady=5)
+bot3=tk.Button(root,width=15,height=2,text="import pictures",command=change_file)
+bot3.grid(row=5,column=5,padx=2,pady=5)
+bot4=tk.Button(root,width=15,height=2,text="View origin image",command=seesee)
+bot4.grid(row=5,column=7,padx=2,pady=5)
 
 root.mainloop()
