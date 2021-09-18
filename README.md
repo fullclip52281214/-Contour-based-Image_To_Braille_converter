@@ -1,4 +1,4 @@
-# Contour-based__Image_To_Braille_Converter
+# Contour-based__Image To Braille Converter
 A real time parameters adjust program using slider.
 Edge enhancement is suitable for large pictures.
 
